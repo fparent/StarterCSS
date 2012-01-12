@@ -1,0 +1,15 @@
+StarterCSS is a nifty resource to help you start your webapps and sites on the right foot.
+
+While the debate rages in the community about which is better, reseting or normalizing your CSS styles, I decided to take an alternative hybrid approach and combine them. Call me Frankenstein but I love to remove *some* of the unwanted default CSS attributes, while leaving the others to be handled by their respective browsers. StarterCSS also reset/emulates some of the original styles of different browsers, which proved to be a rewarding science. 
+
+Technically, it combines normalize.css (by Nicolas Gallagher and Jonathan Neal), a custom and stripped version of Eric Meyer's Reset CSS and some base modular styles for your pleasure. The result is a progressive, flexible, consistent across browsers, lightweight (~10Kb), production-ready CSS. 
+
+Can this monster help you too?
+* Corrects inconsistencies and provide useful basic styles
+* Preserves useful defaults (as per normalize.css) while reseting only some of the elements
+* Basic support for new HTML5 elements
+* Uses a modular structure: it's easy for you to remove unwanted sections of styling
+* Goes beyond just resetting; it adds beautiful and handy styles for certain elements
+* Make your project look beautiful on any size, any devices (mobile, tablet, Web)
+
+Remember that this is still a work in progress. As browsers and web development techniques keep evolving, so will this framework. I trully encourage you to go ahead and play with starter.css; this a only a starting point. Add, remove, edit rulesets or styles to make it perfect for your needs. When it comes to CSS framework, there's no "one size fit all" solution!
