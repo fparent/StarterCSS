@@ -26,7 +26,7 @@
 
 
 /************************************************************************************
-* CSS RESET
+* CSS RESET 
 *************************************************************************************/
 html, body, div, span, object, iframe,
 p, blockquote, pre,
@@ -62,22 +62,25 @@ time, mark, audio, video {
  * Keeps page centred in all browsers regardless of content height
  * Prevents iOS text size adjust after orientation change, without disabling user zoom
    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
- * Fix for webkit renderin
+ *
+ * Using ems instead of pixels will give you a lot of control over how your site can scale 
+ * https://gist.github.com/1438467
+ *
  */
 html {
   color: #404040;
-  font: 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
-  overflow-y: scroll;
+  font: 0.875em "Helvetica Neue", Helvetica, Arial, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
+  background: #fff;
   line-height: 1.25;
 }
 
-/* HTML5 display-role reset for older browsers */
+/* Block-Level Elements */
 article,
 aside,
 details,
@@ -90,6 +93,12 @@ menu,
 nav,
 section {
   display: block;
+
+  /* Fix the box model for every block-level elements
+   * http://paulirish.com/2012/box-sizing-border-box-ftw/#comment-111792
+   */
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 /*
@@ -144,12 +153,12 @@ a {
   background: transparent;
 }
 
+a:hover { color: #06e; }
+
 a:visited {
   opacity: 0.8;
   color: #551a8b;
 }
-
-a:hover { color: #06e; }
 
 /* 
  * Improves readability when focused and also mouse hovered in all browsers
@@ -241,7 +250,7 @@ h3,
 h4,
 h5,
 h6 {
-	display:block;
+	display: block;
   padding: 0;
   margin: 0;
 	border: 0;
@@ -260,38 +269,35 @@ h6 a {
   font-weight: inherit; 
 }
 
+
 h1 { 
-  font-size: 46px; 
-  line-height: 50px; 
-  margin-bottom: 14px;
+  font-size: 3em; 
+  line-height: 2em; 
+  margin-bottom: 1em;
 }
 
 h2 { 
-  font-size: 35px; 
-  line-height: 40px; 
-  margin-bottom: 10px; 
+  font-size: 2.25em; 
+  line-height: 2em; 
+  margin-bottom: 0.625em; 
 }
 
 h3 { 
-  font-size: 28px; 
-  line-height: 34px; 
-  margin-bottom: 8px; 
+  font-size: 1.75em; 
+  line-height: 2em; 
+  margin-bottom: 0.5em; 
 }
 
 h4 { 
-  font-size: 21px; 
-  line-height: 30px; 
-  margin-bottom: 4px; 
+  font-size: 1.375em; 
 }
 
 h5 { 
-  font-size: 17px; 
-  line-height: 24px; 
+  font-size: 1em; 
 }
 
 h6 { 
-  font-size: 14px; 
-  line-height: 21px; 
+  font-size: 0.875em; 
 }
 
 /* Addresses styling not present in IE7/8/9, S5, Chrome */
@@ -946,17 +952,20 @@ img .right {
 *************************************************************************************/
 
 /* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) {}
+@media only screen and ( max-width: 959px ) {
+  
+}
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+@media only screen and ( min-width: 768px ) and ( max-width: 959px ) {
   
   /* Note: Design for a width of 768px */
   .wrapper { width: 768px; }
+
 }
 
 /* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 767px) {
+@media only screen and ( max-width: 767px ) {
   
   /* Note: Design for a width of 320px */
   .wrapper { width: 300px; }
@@ -969,11 +978,14 @@ img .right {
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and ( min-width: 480px ) and ( max-width: 767px ) {
   
   /* Note: Design for a width of 480px */
   .wrapper { width: 420px; }
+
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {}
+@media only screen and ( max-width: 479px ) {
+  
+}
