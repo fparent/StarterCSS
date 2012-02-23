@@ -6,9 +6,6 @@
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 *
-* Thanks to Eric Meyer (meyerweb.com) for his CSS reset file. I'm using an adapted
-* and filtered version but none of this would've been possible without his work.
-*
 * Thanks to Dave Gamache (davegamache.com) for the design inspiration of the form
 * elements. His Skeleton Boilerplate is awesome.
 * 
@@ -217,6 +214,8 @@ details summary::-webkit-details-marker {
 
 /************************************************************************************
 * TYPOGRAPHY
+* Felt like these elements deserved a modular section even though they should be in
+* Typography because I found out that most of the time they will be overwritten
 *************************************************************************************/
 
 /* Reset and normalize the headings for cross-browsers  */
@@ -226,14 +225,14 @@ h3,
 h4,
 h5,
 h6 {
-	display: block;
+  display: block;
   padding: 0;
   margin: 0;
-	border: 0;
-	font-weight: bold;
-	font-style: normal;
-	font-family: inherit;
-	vertical-align: baseline;
+  border: 0;
+  font-weight: bold;
+  font-style: normal;
+  font-family: inherit;
+  vertical-align: baseline;
 }
 
 h1 a, 
@@ -244,7 +243,6 @@ h5 a,
 h6 a { 
   font-weight: inherit; 
 }
-
 
 h1 { 
   font-size: 3em; 
@@ -275,6 +273,11 @@ h5 {
 h6 { 
   font-size: 0.875em; 
 }
+
+
+/************************************************************************************
+* TYPOGRAPHY
+*************************************************************************************/
 
 /* Addresses styling not present in IE7/8/9, S5, Chrome */
 abbr[title],
