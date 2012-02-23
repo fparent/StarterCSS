@@ -24,63 +24,9 @@
 * 
 *************************************************************************************/
 
-
-/************************************************************************************
-* CSS RESET 
-*************************************************************************************/
-
-html, body, div, span, object, iframe,
-p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-}
-
-
 /************************************************************************************
 * BASE
 *************************************************************************************/
-
-/*
- * Corrects text resizing oddly in IE6/7 when body font-size is set using em units
-   http://clagnut.com/blog/348/#c790
- * Keeps page centred in all browsers regardless of content height
- * Prevents iOS text size adjust after orientation change, without disabling user zoom
-   www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
- *
- * Using ems instead of pixels will give you a lot of control over how your site can scale 
- * https://gist.github.com/1438467
- *
- */
-html {
-  color: #404040;
-  font: 0.875em "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-}
-
-body {
-  background: #fff;
-  line-height: 1.25;
-}
 
 /* Apply a natural box layout model to all elements
  * http://paulirish.com/2012/box-sizing-border-box-ftw
@@ -95,11 +41,29 @@ body {
   /* Prevent from repeating the property on every item with a background-image */
   background-repeat: no-repeat;
 
+  /* Ghetto reset for every elements; will keep the developer tools clean */
+  margin: 0;
+  padding: 0;
+}
 
-  -webkit-transition: all 0.2s ease;
-  -moz-transition:    all 0.2s ease;
-  -ms-transition:     all 0.2s ease;
-  -o-transition:      all 0.2s ease;
+/*
+ * Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+   http://clagnut.com/blog/348/#c790
+ * Keeps page centred in all browsers regardless of content height
+ * Prevents iOS text size adjust after orientation change, without disabling user zoom
+   www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+html {
+  color: #404040;
+  font: 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #fff;
+  line-height: 1.25;
 }
 
 /* Block-Level Elements */
@@ -558,6 +522,7 @@ dl dd {
 
 /* IE7: Gets or sets the interpolation (resampling) method used to stretch images. */
 img {
+  border: 0;
   font-style: italic;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
