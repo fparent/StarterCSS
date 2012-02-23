@@ -28,6 +28,7 @@
 /************************************************************************************
 * CSS RESET 
 *************************************************************************************/
+
 html, body, div, span, object, iframe,
 p, blockquote, pre,
 abbr, address, cite, code,
@@ -56,6 +57,7 @@ time, mark, audio, video {
 /************************************************************************************
 * BASE
 *************************************************************************************/
+
 /*
  * Corrects text resizing oddly in IE6/7 when body font-size is set using em units
    http://clagnut.com/blog/348/#c790
@@ -80,6 +82,26 @@ body {
   line-height: 1.25;
 }
 
+/* Apply a natural box layout model to all elements
+ * http://paulirish.com/2012/box-sizing-border-box-ftw
+ * Also using * alone should not be a great performance issue
+ * http://css-tricks.com/things-it-might-be-funuseful-to-try-the-universal-selector-on/
+ */
+* { 
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box; 
+
+  /* Prevent from repeating the property on every item with a background-image */
+  background-repeat: no-repeat;
+
+
+  -webkit-transition: all 0.2s ease;
+  -moz-transition:    all 0.2s ease;
+  -ms-transition:     all 0.2s ease;
+  -o-transition:      all 0.2s ease;
+}
+
 /* Block-Level Elements */
 article,
 aside,
@@ -93,12 +115,6 @@ menu,
 nav,
 section {
   display: block;
-
-  /* Fix the box model for every block-level elements
-   * http://paulirish.com/2012/box-sizing-border-box-ftw/#comment-111792
-   */
-  -moz-box-sizing: border-box; 
-  box-sizing: border-box;
 }
 
 /*
@@ -144,7 +160,6 @@ textarea {
 *************************************************************************************/
 
 a { 
-  color: #00e; 
   margin: 0;
   padding: 0;
   font-size: 100%;
@@ -153,11 +168,8 @@ a {
   background: transparent;
 }
 
-a:hover { color: #06e; }
-
 a:visited {
   opacity: 0.8;
-  color: #551a8b;
 }
 
 /* 
@@ -224,7 +236,7 @@ audio:not([controls]) {
 
 /* Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4 */
 [hidden] {
-    display: none;
+  display: none;
 }
 
 address {
@@ -608,6 +620,7 @@ label {
 /************************************************************************************
 * FORMS BUTTONS
 *************************************************************************************/
+
 /*
  * 1. Improves usability and consistency of cursor style between image-type 'input' and others
  * 2. Corrects inability to style clickable 'input' types in iOS
@@ -685,7 +698,6 @@ input[type="button"]:active {
   background: #ccc -ms-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* IE10+ */
   background: #ccc linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* W3C */ 
 }
-
 
 
 /************************************************************************************
@@ -825,6 +837,7 @@ input::-moz-focus-inner {
 :-moz-placeholder {
   color: #bfbfbf;
 }
+
 ::-webkit-input-placeholder {
   color: #bfbfbf;
 }
@@ -916,34 +929,34 @@ input::-moz-focus-inner {
 .alignRight { 
 	text-align: right; 
 }
+
 .alignLeft { 
 	text-align:left; 
 }
-.center { 
+
+.center { ;
 	text-align: center; 
 }
+
 .right { 
 	float: right; 
 }
+
 .left { 
 	float: left; 
 }
 
-img .left {
+img.left {
 	margin-right: 1em;
 }
 
-img .right {
+img.right {
 	margin-left: 1em;
 }
 
-.clear {
+.clear, .clearer {
   clear: both;
   display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0;
 }
 
 
