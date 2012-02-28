@@ -854,9 +854,15 @@ input::-moz-focus-inner {
 	visibility: visible;
 }
 
-/* Hide visually and from screenreaders, but maintain layout */
+/* Using the Clip Method, hide visually but NOT from screenreaders.
+ * This is a best practice for accessibility. For more information:
+ * http://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
+ * Clip Method: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
 .invisible { 
-	visibility: hidden; 
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
 }
 .visible {
 	visibility: visible;
