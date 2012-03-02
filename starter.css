@@ -300,6 +300,10 @@ strong {
 	font-weight: bold;
 }
 
+.weak {
+  font-weight: normal;
+}
+
 hr {
   display: block; 
   clear: both;
@@ -930,6 +934,18 @@ img.left {
 
 img.right {
 	margin-left: 1em;
+}
+
+/* 
+ * Cleaner approach to the popular method "text-indent: -9999px" for hidding text when
+ * using a background image.
+ * Prevent the browser form "painting" a huge container and increase perf on iPad 1
+ * http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+ */
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 
