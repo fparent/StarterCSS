@@ -35,7 +35,7 @@
   -webkit-box-sizing: border-box; 
   box-sizing: border-box; 
 
-  /* Prevent from repeating the property on every item with a background-image */
+  /* Shortcut to prevent from repeating the property on every item with a background-image */
   background-repeat: no-repeat;
 
   /* Ghetto reset for every elements; will keep the developer tools clean */
@@ -466,7 +466,7 @@ blockquote small:before {
 * LISTS
 *************************************************************************************/
 
-ul, ol {
+.content ul, .content ol {
   margin: 1em;
 }
 
@@ -846,6 +846,10 @@ input::-moz-focus-inner {
   visibility: hidden;
 }
 
+.content {
+  position: relative;
+}
+
 
 /************************************************************************************
  * HELPER
@@ -878,7 +882,6 @@ input::-moz-focus-inner {
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
-
 
 /* 
  * The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.
