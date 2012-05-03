@@ -942,12 +942,13 @@ img.right {
  * Cleaner approach to the popular method "text-indent: -9999px" for hidding text when
  * using a background image.
  * Prevent the browser form "painting" a huge container and increase perf on iPad 1
- * http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+ * http://nicolasgallagher.com/another-css-image-replacement-technique/
  */
-.hide-text {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+.hide-text, .ir {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
 }
 
 
