@@ -62,6 +62,12 @@ body {
   line-height: 1.25;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
 /* Block-Level Elements */
 article,
 aside,
@@ -125,10 +131,6 @@ a {
   font-size: 100%;
   text-decoration: underline; 
   vertical-align: baseline;
-}
-
-a:visited {
-  opacity: 0.8;
 }
 
 /* 
@@ -250,32 +252,32 @@ h6 a {
  */
 h1, .alpha { 
   font-size: 3em; 
-  line-height: 2em; 
   margin-bottom: 1em;
 }
 
 h2, .beta { 
-  font-size: 2.25em; 
-  line-height: 2em; 
-  margin-bottom: 0.625em; 
+  font-size: 2.250em;
+  margin-bottom: 0.75em;
 }
 
 h3, .gamma { 
   font-size: 1.75em; 
-  line-height: 2em; 
-  margin-bottom: 0.5em; 
+  margin-bottom: 0.5em;
 }
 
 h4, .delta { 
   font-size: 1.375em; 
+  margin-bottom: 0.5em;
 }
 
 h5, .epsilon { 
-  font-size: 1em; 
+  font-size: 1.125em;
+    margin-bottom: 0.5em;
 }
 
 h6, .zeta { 
-  font-size: 0.875em; 
+  font-size: 1em;
+  margin-bottom: 0; 
 }
 
 
@@ -320,6 +322,7 @@ hr {
 
 p, article {
   margin-bottom: 1.25em;
+  position: relative;
 }
 
 article small {
@@ -391,7 +394,7 @@ pre {
 
 figcaption,
 small {
-  font-size: 85%;
+  font-size: 68%
 }
 
 /*
@@ -466,14 +469,14 @@ blockquote small:before {
 *************************************************************************************/
 
 .content ul, .content ol {
-  margin: 1em;
+  margin: 0 0 1.25em 1.25em;
 }
 
-ul {
+.content ul {
   list-style: disc outside;
 }
 
-ol {
+.content ol {
   list-style: decimal outside;
   counter-reset: item;
 }
@@ -522,6 +525,7 @@ dd {
 dl dt {
   font-weight: bold;
 }
+
 dl dd {
   margin-left: 1em;
 }
@@ -563,10 +567,6 @@ figure img {
 /************************************************************************************
 * FORMS
 *************************************************************************************/
-
-form {
-  margin-bottom: 1em;
-}
 
 fieldset { 
   padding: 1.5em 0;
@@ -851,19 +851,30 @@ input::-moz-focus-inner {
 
 
 /************************************************************************************
- * HELPER
+ * UTILITY
 *************************************************************************************/
+/* 
+ * Cleaner approach to the popular method "text-indent: -9999px" for hidding text when
+ * using a background image.
+ * Prevent the browser form "painting" a huge container and increase perf on iPad 1
+ * http://nicolasgallagher.com/another-css-image-replacement-technique/
+ */
+.hide-text, .ir {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
 /* 
  * Hide for both screenreaders and browsers:
    css-discuss.incutio.com/wiki/Screenreader_Visibility
  */
 .hidden, .hide { 
 	display: none; 
-	visibility: hidden;
 }
 .visible, .show {
 	display: block;
-	visibility: visible;
 }
 .invisible { 
   visibility: hidden;
@@ -909,47 +920,29 @@ input::-moz-focus-inner {
   display: block;
 }
 
-/* Alignment classes */
-.alignRight { 
-	text-align: right; 
-}
+/* Reusable text alignment class */
+.alignLeft    { text-align:left; }
+.alignCenter  { text-align: center; }
+.alignRight   { text-align: right; }
 
-.alignLeft { 
-	text-align:left; 
-}
+/* Float element to the left or right */
+.right  { float: right; }
+.left   { float: left;}
 
-.center { ;
-	text-align: center; 
-}
+/* If the element floated is an image, add some spacing next to it */
+img.left  { margin-right: 1em; }
+img.right { margin-left: 1em; }
 
-.right { 
-	float: right; 
-}
+/* Generic reusable spacers */
+.no-margin      { margin: 0; }
+.space-top      { margin-top: 2.500em; }
+.space-right    { margin-right: 2.500em; }
+.space-bottom   { margin-bottom: 2.500em; }
+.space-left     { margin-left: 2.500em; }
 
-.left { 
-	float: left; 
-}
-
-img.left {
-	margin-right: 1em;
-}
-
-img.right {
-	margin-left: 1em;
-}
-
-/* 
- * Cleaner approach to the popular method "text-indent: -9999px" for hidding text when
- * using a background image.
- * Prevent the browser form "painting" a huge container and increase perf on iPad 1
- * http://nicolasgallagher.com/another-css-image-replacement-technique/
- */
-.hide-text, .ir {
-  border: 0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
-}
+/* Sometimes some elements need to be exceptionnaly displayed differently */
+.block        { display: block; }
+.inline-block { display: inline-block; }
 
 
 /************************************************************************************
