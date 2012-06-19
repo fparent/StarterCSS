@@ -38,7 +38,8 @@
   /* Shortcut to prevent from repeating the property on every item with a background-image */
   background-repeat: no-repeat;
 
-  /* Ghetto reset for every elements; will keep the developer tools clean */
+  /* Ghetto reset for every elements; will keep the developer tools clean
+     and define a consistent foundation across browsers to build the site on. */
   margin: 0;
   padding: 0;
 }
@@ -51,6 +52,7 @@
    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
  */
 html {
+  background-color: white;
   color: #404040;
   font: 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
   -ms-text-size-adjust: 100%;
@@ -126,9 +128,6 @@ textarea {
 *************************************************************************************/
 
 a { 
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
   text-decoration: underline; 
   vertical-align: baseline;
 }
@@ -297,7 +296,8 @@ dfn[title] {
  * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
  */
 b, 
-strong {
+strong,
+.strong {
 	font-weight: bold;
 }
 
@@ -407,9 +407,11 @@ sub, sup {
   position: relative;
   vertical-align: baseline;
 }
+
 sup {
   top: -0.5em;
 }
+
 sub {
   bottom: -0.25em;
 }
