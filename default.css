@@ -7,6 +7,7 @@
 * Author
 *************************************************************************************
 
+-------------------------------------------------------------------------------------
 
 BEST PRACTICES TO REMEMBER
 
@@ -38,6 +39,9 @@ an accordion section may be in a collapsed or expanded state. A message may be i
 success or error state. Use the "is-state" naming pattern. (SMACSS)
 
 
+                          - Remove after reading -
+
+-------------------------------------------------------------------------------------
 */
 
 
@@ -52,7 +56,7 @@ success or error state. Use the "is-state" naming pattern. (SMACSS)
 
 
 /************************************************************************************
-* STRUCTURE
+* LAYOUT
 *************************************************************************************/
 
 
