@@ -1,6 +1,6 @@
 StarterCSS is a nifty resource to help you start your Web sites and application on the right foot.
 
-Checkout the demo: [http://fparent.github.io/StarterCSS](http://fparent.github.io/StarterCSS)
+Checkout the demo: http://fparent.github.io/StarterCSS
 
 Technically, it combines normalize.css (by Nicolas Gallagher and Jonathan Neal), many of the best practices, and some base modular styles for your pleasure. The result is a progressive, flexible, consistent across browsers, lightweight (~10Kb), production-ready CSS. 
 
